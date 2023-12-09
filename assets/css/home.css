@@ -1,0 +1,19 @@
+/* style for home page */
+.assignedreview{
+    background-color: rgba(205, 226, 152, 0.493);
+    width: 48%;
+
+}
+.myreview{
+    width: 48%;
+    background-color: rgb(190, 240, 223);
+}
+#message{
+    border: none;
+    padding: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 10px;
+    margin-left: 1%;
+    outline: none;
+}

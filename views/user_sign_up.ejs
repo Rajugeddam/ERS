@@ -1,0 +1,41 @@
+<!-- html code for signup page -->
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card w-50 bg-info">
+        <h1 class="card-header text-center">Sign UP</h1>
+        <div class="card-body">
+        <form action="/user/create" method="post">
+            <div class="mb-3">
+                <label for="exampleInputName1" class="form-label">Full Name</label>
+                <input type="text" class="form-control" name="name" id="exampleInputName1" aria-describedby="nameHelp">
+                <div id="nameHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+                <input type="password" name="c_password" class="form-control" id="exampleInputPassword2">
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label text-light" for="exampleCheck1">Check me out</label>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-light" href="/user/sign-in">Already Sign In?</a>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>

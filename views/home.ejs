@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/css/home.css">
+<!-- show the employee page -->
+<div class="container px-4 mt-2">
+    <div class="row gx-5">
+        <div class="col-md-6 card assignedreview">
+            <div id="assignedReview" class="container">
+                <h2 class="mt-2 text-center">Assigned Reviews</h2>
+                <div id="assignReviews-div" class="row d-flex justify-content-center">
+                    <% for (let AssignedReview of user.assignReview) { %>
+                    <form action="/completeReview" method="post" class="mt-3 form-inline">
+                        <label for="">To : <%= AssignedReview.toUser.name %></label>
+                        <textarea id="message" name="message" placeholder="Enter Review comments" required></textarea>
+                        <input type="hidden" name="toUser" value="<%= AssignedReview.toUser._id %>">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 card m-1 myreview">
+            <div id="myReview">
+                <h2 class="text-center mt-2">My Reviews</h2>
+                <% for (let MyReview of user.myReview) { %>
+                <div id="myReviews-div" class="position-relative review" value="<%=MyReview.id%>">
+                    <a href="/delete/<%=MyReview.id%>" class="position-absolute top-0 end-0 nav-link delete-review">X</a>
+                    <% if (MyReview.fromUser && MyReview.fromUser.name) { %>
+                        <p>From: <%= MyReview.fromUser.name %></p>
+                      <% } else { %>
+                        <p>From: User information not available</p>
+                      <% } %>
+                    <p>Review : <span><%= MyReview.message %></span></p>
+                    <hr>
+                <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/delete_emp_review.js"></script>

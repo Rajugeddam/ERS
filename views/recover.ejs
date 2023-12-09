@@ -1,0 +1,23 @@
+<!-- html code for show the recover password page -->
+<div class="container d-flex justify-content-center align-items-center vh-100 text-light">
+  <div class="card w-50 bg-danger">
+    <h1 class="card-header text-center">Reset Password</h1>
+    <div class="card-body">
+    <form class="row g-3" action="/reset/update" method="post">
+      <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Password</label>
+        <input type="password" name="password" class="form-control" id="inputPassword2" placeholder="Password">
+      </div>
+      <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Password</label>
+        <input type="password" name="c_password" class="form-control" id="inputPassword2"
+          placeholder="Confirm Password">
+      </div>
+      <input type="hidden" name="token" value="<%=token%>" />
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Update Password</button>
+      </div>
+    </form>
+  </div>
+  </div>
+</div>
